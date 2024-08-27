@@ -1,75 +1,50 @@
-# 0x02. i18n
+# 0x05. N Queens Algorithm
 
 ## Curriculum
 - Short Specializations
 - Average: 141.24%
 
 ## Project Timeline
-- **Project Start:** Aug 27, 2024, 6:00 AM
-- **Project End:** Aug 28, 2024, 6:00 AM
-- **Checker Release:** Aug 27, 2024, 12:00 PM
-- **Manual QA Review:** Request when done
+- **Project Start:** Aug 26, 2024, 6:00 AM
+- **Project End:** Aug 30, 2024, 6:00 AM
+- **Checker Release:** Aug 27, 2024, 6:00 AM
 - **Auto Review:** Launched at the deadline
 
 ## Resources
-- [Flask-Babel](https://pythonhosted.org/Flask-Babel/)
-- [Flask i18n tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n)
-- [pytz](https://pythonhosted.org/pytz/)
+- Backtracking Introduction
+- Recursion in Python
+- Python Lists
+- Command Line Arguments in Python
 
 ## Learning Objectives
-- Parametrize Flask templates to display different languages.
-- Infer the correct locale based on URL parameters, user settings, or request headers.
-- Localize timestamps.
+- Understand how backtracking algorithms work to explore all potential solutions to a problem and backtrack when a solution cannot be completed.
+- Use recursive functions to implement backtracking algorithms.
+- Create and manipulate lists, especially to store the positions of queens on the board.
+- Handle command-line arguments with the `sys` module.
 
 ## Requirements
-- All files will be interpreted/compiled on Ubuntu 18.04 LTS using Python 3.7.
+- All files will be interpreted/compiled on Ubuntu 20.04 LTS using Python 3.4.3.
 - All files should end with a new line.
 - A `README.md` file at the root of the project is mandatory.
-- Code should use the `pycodestyle` style (version 2.5).
-- The first line of all files should be exactly `#!/usr/bin/env python3`.
+- Code should use the `PEP 8` style (version 1.7.*).
+- The first line of all files should be exactly `#!/usr/bin/python3`.
 - All `*.py` files should be executable.
 - All modules should have documentation.
 - All classes should have documentation.
 - All functions and methods should have documentation.
 - All functions and coroutines must be type-annotated.
 
+## Files
+- `0-nqueens.py`: Basic implementation of the N Queens algorithm.
+- `README.md`: Project documentation.
+
 ## Tasks
 
-### 0. Basic Flask app
-- **File:** `0-app.py`, `templates/0-index.html`
-- **Description:** Setup a basic Flask app with a single `/` route and an `index.html` template that outputs “Welcome to Holberton” as the page title and “Hello world” as the header.
+### 0. Basic N Queens Algorithm
+- **File:** `0-nqueens.py`
+- **Description:** Implement the N Queens algorithm using backtracking to place N non-attacking queens on an N×N chessboard.
 
-### 1. Basic Babel setup
-- **File:** `1-app.py`, `templates/1-index.html`
-- **Description:** Install Flask-Babel and configure it with a `Config` class that sets available languages to `["en", "fr"]`, default locale to `"en"`, and timezone to `"UTC"`.
+## Example Usage
+```bash
+$ ./0-nqueens.py 4
 
-### 2. Get locale from request
-- **File:** `2-app.py`, `templates/2-index.html`
-- **Description:** Create a `get_locale` function using the `babel.localeselector` decorator to determine the best match with supported languages.
-
-### 3. Parametrize templates
-- **File:** `3-app.py`, `babel.cfg`, `templates/3-index.html`, `translations/en/LC_MESSAGES/messages.po`, `translations/fr/LC_MESSAGES/messages.po`, `translations/en/LC_MESSAGES/messages.mo`, `translations/fr/LC_MESSAGES/messages.mo`
-- **Description:** Use `_` or `gettext` to parametrize templates. Initialize translations and compile dictionaries.
-
-### 4. Force locale with URL parameter
-- **File:** `4-app.py`, `templates/4-index.html`
-- **Description:** Implement a way to force a particular locale using the `locale` URL parameter.
-
-### 5. Mock logging in
-- **File:** `5-app.py`, `templates/5-index.html`
-- **Description:** Mock a user login system using a user table and display a welcome message if a user is logged in.
-
-### 6. Use user locale
-- **File:** `6-app.py`, `templates/6-index.html`
-- **Description:** Modify `get_locale` to use a user’s preferred locale if supported.
-
-### 7. Infer appropriate time zone
-- **File:** `7-app.py`, `templates/7-index.html`
-- **Description:** Define a `get_timezone` function to infer the time zone from URL parameters, user settings, or default to UTC.
-
-### 8. Display the current time
-- **File:** `app.py`, `templates/index.html`, `translations/en/LC_MESSAGES/messages.po`, `translations/fr/LC_MESSAGES/messages.po`
-- **Description:** Display the current time on the home page based on the inferred time zone.
-
-## License
-This project is licensed under the terms of the ALX license.
