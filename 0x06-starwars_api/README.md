@@ -1,5 +1,8 @@
 # 0x06. Star Wars API
 
+# `StarWars_API`
+![](https://cdn.vox-cdn.com/thumbor/gHP2IAVuz8lgJHS9Y5UFtij5weI=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7855689/Staw.png)
+
 ## Description
 
 This project involves interacting with the Star Wars API to fetch and display information about Star Wars characters based on the movie ID provided as an argument. The goal is to retrieve, process, and display the characters in the specified movie using asynchronous programming in JavaScript.
